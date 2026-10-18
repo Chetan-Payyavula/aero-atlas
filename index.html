@@ -3,11 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aero Atlas | 3D F1 Aerodynamics &amp; Regulations, 1961–2026</title>
+<meta name="description" content="Interactive 3D history of F1 rules from 1961 to 2026: wings, sidepods, floors, ground effect, DRS, 2026 active aero and engines, with every dimension sourced.">
+<meta name="keywords" content="F1 aerodynamics, Formula 1 regulations, F1 2026 regulations, active aero, ground effect, DRS, F1 car dimensions, F1 history, sidepods, front wing, rear wing, Williams FW14B, Brawn double diffuser, 3D F1 car">
+<meta name="author" content="Chetan Payyavula">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://chetan-payyavula.github.io/aero-atlas/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#14212d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chetan Payyavula">
+<meta property="og:title" content="Aero Atlas | 3D F1 Aerodynamics &amp; Regulations, 1961–2026">
+<meta property="og:description" content="Interactive 3D history of F1 rules from 1961 to 2026: wings, sidepods, floors, ground effect, DRS, 2026 active aero and engines, with every dimension sourced.">
+<meta property="og:url" content="https://chetan-payyavula.github.io/aero-atlas/">
+<meta property="og:image" content="https://chetan-payyavula.github.io/img/aero-2026.jpg">
+<meta property="og:image:width" content="1040">
+<meta property="og:image:height" content="736">
+<meta property="og:image:alt" content="Aero Atlas 3D model of the 2026 Formula 1 regulation car with dimension lines">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aero Atlas | 3D F1 Aerodynamics &amp; Regulations, 1961–2026">
+<meta name="twitter:description" content="Interactive 3D history of F1 rules from 1961 to 2026: wings, sidepods, floors, ground effect, DRS, 2026 active aero and engines, with every dimension sourced.">
+<meta name="twitter:image" content="https://chetan-payyavula.github.io/img/aero-2026.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Aero Atlas", "url": "https://chetan-payyavula.github.io/aero-atlas/", "description": "Interactive 3D history of F1 rules from 1961 to 2026: wings, sidepods, floors, ground effect, DRS, 2026 active aero and engines, with every dimension sourced.", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (WebGL browser)", "isAccessibleForFree": true, "image": "https://chetan-payyavula.github.io/img/aero-2026.jpg", "author": {"@type": "Person", "name": "Chetan Payyavula", "url": "https://chetan-payyavula.github.io/", "sameAs": ["https://github.com/Chetan-Payyavula"]}}</script>
 <style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-</head>
-<body>
-<title>Aero Atlas 1961–2026</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -40,8 +60,10 @@ button,input,select{font:inherit;color:inherit}
   padding-left:max(0px,env(safe-area-inset-left,0px));padding-right:max(0px,env(safe-area-inset-right,0px))}
 header.top{grid-column:1/-1;display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--line);
   padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.brand{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.brand{margin:0;font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:.02em;text-transform:uppercase;line-height:1}
 .brand span{color:var(--dim)}
+.tools{min-width:0;max-width:100%}#tCompare{max-width:100%;min-width:0}
+.sheet li a,.sheet td a,.sheet .small a,.credit a{display:inline-block;padding-block:3px}
 .sub{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .tools{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
 .tool{border:1px solid var(--line);background:var(--panel);padding:5px 10px;border-radius:4px;cursor:pointer;font-size:12.5px;font-weight:500}
@@ -146,10 +168,13 @@ footer.time{grid-column:1;border-top:1px solid var(--line);background:var(--pane
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
 </style>
 
+</head>
+<body>
+<noscript><p style="padding:16px;font:16px system-ui">Aero Atlas needs JavaScript and WebGL for the 3D model. The <a href="https://chetan-payyavula.github.io/aero-atlas/guide.html">F1 aerodynamics and regulations guide</a> covers the same rules as plain text.</p></noscript>
 <div class="app">
   <header class="top">
     <div>
-      <div class="brand">Aero <span>Atlas</span></div>
+      <h1 class="brand">Aero <span>Atlas</span></h1>
       <div class="sub">F1 regulations & aerodynamics · 1961–2026</div>
     </div>
     <div class="tools" role="toolbar" aria-label="View options">
@@ -1261,11 +1286,13 @@ function renderSheet() {
     ${gridHtml}
     <h3>Landmark cars</h3>
     ${cars}
+    <h3>Learn more</h3>
+    <p class="small"><a href="https://chetan-payyavula.github.io/aero-atlas/guide.html">F1 aerodynamics and regulations explained</a>: every era's rules, the radical designs and answers to common questions on one page.</p>
     <h3>About the model</h3>
     <p class="small">The 3D car is a generic model built from this era's regulations and typical proportions. It is not a replica of any team's car. Red dimensions are rulebook figures; grey dashed ones marked ≈ are approximate model sizes. The airflow is illustrative, not CFD.</p>
     <h3>Sources</h3>
     <ol class="srcs">${SRC_IDS.map((i) => `<li><a href="${SRC[i][1]}" target="_blank" rel="noopener">${esc(SRC[i][0])}</a></li>`).join("")}</ol>
-    <div class="credit">Built by <b>Chetan Payyavula</b> · three.js, hand-built geometry, sourced rule figures. Season grids from F1DB (CC BY 4.0). Not affiliated with Formula 1, the FIA or any team.</div>`;
+    <div class="credit">Built by <a href="https://chetan-payyavula.github.io/"><b>Chetan Payyavula</b></a> · three.js, hand-built geometry, sourced rule figures. Season grids from F1DB (CC BY 4.0). Not affiliated with Formula 1, the FIA or any team.</div>`;
   const ht = $("howto"); if (ht) { ht.open = store.get("aero.howto") !== "closed"; ht.addEventListener("toggle", () => store.set("aero.howto", ht.open ? "open" : "closed")); }
   $("sheet").querySelectorAll(".chip[data-part]").forEach((b) => b.addEventListener("click", () => setPart(b.dataset.part)));
   $("sheet").querySelectorAll(".chip[data-show]").forEach((b) => b.addEventListener("click", () => { state.part = null; setPart(b.dataset.show.split(",").find((p) => avail.includes(p)) || null); }));
